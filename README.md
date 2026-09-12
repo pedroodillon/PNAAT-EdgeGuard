@@ -234,4 +234,4 @@ Não fazem parte desta versão:
 
 ## Equipe
 
-**EdgeGuard — PNAAT 2026 | Cariri TCC**
+**EdgeGuard — PNAAT 2026**
