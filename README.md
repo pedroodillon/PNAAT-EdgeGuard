@@ -235,8 +235,3 @@ Não fazem parte desta versão:
 ## Equipe
 
 **EdgeGuard — PNAAT 2026 | Cariri TCC**
-
-- Gabriel Moreira Tavares Santana
-- Pedro Odillon Felicio Marques Mendonça Figueiredo
-- Weslley Fernandes Souza
-- João Kayque Pereira de Souza
