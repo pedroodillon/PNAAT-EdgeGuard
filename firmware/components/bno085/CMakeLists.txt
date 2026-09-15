@@ -8,5 +8,6 @@ idf_component_register(SRCS "bno085.c"
                                "sh2/sh2_util.c"
                                "sh2/euler.c"
                        INCLUDE_DIRS "." "sh2"
-                       PRIV_REQUIRES esp_driver_i2c esp_driver_gpio esp_timer
+                       PRIV_REQUIRES esp_timer
+					   REQUIRES esp_driver_i2c esp_driver_gpio
                        )
