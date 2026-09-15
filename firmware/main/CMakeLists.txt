@@ -1,1 +1,15 @@
-idf_component_register(SRCS "main.cpp" INCLUDE_DIRS ".")
+idf_component_register(
+  SRCS
+  "vibration_model.cpp"
+  "audio_model.cpp"
+  "main.cpp"
+  INCLUDE_DIRS
+  "."
+  PRIV_REQUIRES
+  i2c
+  ds3231
+  inmp441
+  sdcard
+  wifi
+  mqttw
+  bno085_wrapper)

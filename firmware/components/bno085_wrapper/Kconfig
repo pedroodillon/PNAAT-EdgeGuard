@@ -1,0 +1,14 @@
+menu "BNO085 Wrapper"
+	config BNO085_WRAPPER_INT_PIN
+		int "Int Pin"
+		default 46
+		range 0 48
+		help
+			Int Pin
+	config BNO085_WRAPPER_RST_PIN
+		int "Rst Pin"
+		default 45
+		range 0 48
+		help
+			Rst Pin
+endmenu
