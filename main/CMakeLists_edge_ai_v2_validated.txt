@@ -1,0 +1,31 @@
+idf_component_register(
+    SRCS
+        "main.cpp"
+
+    INCLUDE_DIRS
+        "."
+
+    REQUIRES
+        bno085
+        i2c_config
+        edge_impulse
+        driver
+        freertos
+        log
+)
+
+# ============================================================
+# Edge Impulse compatibility
+#
+# O SDK do Edge Impulse possui inicializadores parciais válidos,
+# mas o GCC 15 usado pelo ESP-IDF 6.1 os reporta como warnings.
+# Como o ESP-IDF usa -Werror, precisamos impedir que esses
+# warnings específicos sejam promovidos a erros no main.cpp.
+# ============================================================
+
+target_compile_options(
+    ${COMPONENT_LIB}
+    PRIVATE
+        -Wno-error=missing-field-initializers
+        -Wno-error=deprecated-declarations
+)

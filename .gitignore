@@ -1,0 +1,29 @@
+# ESP-IDF
+build/
+sdkconfig.old
+
+# IDE / Python
+.vscode/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+*.bak
+
+# Credenciais
+main/wifi_config.h
+main/certs/*
+!main/certs/AmazonRootCA1.pem
+
+# Backups / temporários
+_backups/
+backup_2000/
+ei_extract/
+_merge_final/
+_edge_impulse_v2/
+
+# Arquivos temporários de integração
+edgeguard_final_merge.zip
+
+# Componentes gerados automaticamente
+managed_components/
