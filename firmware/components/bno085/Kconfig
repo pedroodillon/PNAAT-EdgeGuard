@@ -1,0 +1,42 @@
+menu "BNO085 Driver (Hardware Level)"
+
+    config BNO085_I2C_TIMEOUT_MS
+        int "I2C Timeout (milliseconds)"
+        default 250
+        range 50 10000
+        help
+            I2C transaction timeout. Increase if experiencing timeouts on slow I2C bus.
+
+    config BNO085_RESET_RETRY_COUNT
+        int "Soft-Reset Retry Attempts"
+        default 5
+        range 1 20
+        help
+            Number of I2C soft-reset attempts during initialization.
+
+    config BNO085_RESET_RETRY_DELAY_MS
+        int "Soft-Reset Retry Delay (ms)"
+        default 30
+        range 10 1000
+        help
+            Delay between soft-reset retry attempts.
+
+    config BNO085_RESET_SETTLE_DELAY_MS
+        int "Soft-Reset Settle Delay (ms)"
+        default 300
+        range 150 5000
+        help
+            Time to wait after soft-reset for device to stabilize.
+
+    config BNO085_MAX_INSTANCES
+        int "Maximum concurrent BNO085 instances"
+        default 2
+        range 1 8
+        help
+            Compile-time bound on concurrently open BNO085 sessions. Each unit
+            compiles one additional, independently-linked copy of the vendored
+            sh2.c/shtp.c pair. Flash/IRAM usage scales roughly linearly with
+            this value. Most setups need at most 2 (a BNO085 only exposes 2
+            I2C addresses via AD0); raise only for multiple I2C buses/muxes.
+
+endmenu
